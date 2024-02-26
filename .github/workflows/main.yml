@@ -16,8 +16,8 @@ jobs:
         with: 
           name: code
           path: .
-    - uses: actions/download-artifact@v4
-      with:
-      path: ./download/artifacts
+      - uses: actions/download-artifact@v4
+        with:
+        path: ./download/artifacts
       - name: Display structure of downloaded files
-      run: ls -R ./download/artifacts
+        run: ls -R ./download/artifacts
