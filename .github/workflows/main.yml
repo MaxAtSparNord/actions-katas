@@ -7,7 +7,6 @@ jobs:
     steps:
       - name: Clone down repository
         uses: actions/checkout@v4       
-      - run: ci/build-app.sh
-    steps:
+        run: ci/build-app.sh
       - name: test
-      - run: ci/unit-test-app.sh
+        run: ci/unit-test-app.sh
