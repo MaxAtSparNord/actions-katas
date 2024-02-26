@@ -22,11 +22,13 @@ jobs:
     needs: [Build]
     steps:
       - name: Download code
+        if: always()
         uses: actions/download-artifact@v4
         with:
           name: code
           path: .
       - name: run linting
+        if: always()
         uses: super-linter/super-linter/slim@v5 
         env:
           DEFAULT_BRANCH: main
